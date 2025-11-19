@@ -1,21 +1,18 @@
 package com.chikawa.promotion_service.dto.request;
 
+import com.chikawa.promotion_service.models.Promotion;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDateTime;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-//dùng trong service, update promotion
-public class PromotionUpdateRequest {
-     String description;
-     String code;
-     LocalDateTime updatedAt;
-     LocalDateTime expireDate;
+//dùng trong controller, create promotion
+public class FormCreatePromotionRequest {
+    Promotion promotion;
+    Long userId;
 }
